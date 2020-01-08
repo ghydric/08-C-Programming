@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-const int class_total = 15;
-
 int main() {
 
-    // initialize array and zeroize all elements
-    int student_ages [class_total] = {0};
+    static int class_total = 15;
 
+    // initialize array and zeroize all elements
+    int student_ages [class_total];
+    
     // set first element in array to 60
     student_ages[0] = 60;
 
@@ -25,10 +25,10 @@ int main() {
       
     } // end setting for loop
 
-    // loop through each index from 0 to 15 and print out the value of the index
-    for (int i = 0; i <= class_total; i++) {
+    // loop through each index from 0 to 14 and print out the value of the index
+    for (int x = 0; x < class_total; x++) {
         
-        printf("Student %d is $d years old\n", i, student_ages[i]);
+        printf("\nStudent %d is %d years old\n", x + 1, student_ages[x]);
 
     } // end printing for loop
 
