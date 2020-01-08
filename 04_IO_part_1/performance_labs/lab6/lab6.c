@@ -1,10 +1,10 @@
-/*
-Written by: Mitch Hydrick
-Date: 8 Jan 2020
 
-Synopsis: This program gets the first character of user input, displays it to the screen, 
-          then displays the previous character to the screen.
-*/
+// Written by: Mitch Hydrick
+// Date: 8 Jan 2020
+
+// Synopsis: This program gets the first character of user input, displays it to the screen, 
+//          then displays the previous character to the screen.
+
 
 // import needed libraries
 #include <stdio.h>
