@@ -8,14 +8,32 @@
 // import needed libraries
 #include <stdio.h>
 
+// flush the buffer
+int flush_buffer() {
+    fseek(stdin,0,SEEK_END);
+    return 0;
+}
+
 // start main function
 int main(void) {
     
-    char buff[10] = {0};                          // initialize character array
-	printf("Enter a string:  ");                  // prompt user
-	fgets(buff, sizeof(buff), stdin);             // get string entered from stdin and save to buffer
-	printf("The buffer saved the following:  ");
-	fputs(buff, stdout);                          // print out the string that was saved in buffer
-	return 0;
+    // initialize first, middle, and last name char arrays
+    char f_name[21] = {0};
+	char m_name[21] = {0};
+    char l_name[21] = {0};
+    
+    // initialize two numbers to be multiplied
+    int num1 = 0;
+    int num2 = 0;
+
+    printf("Enter first, middle, and last name separated by <tab>s:\n");                  // prompt user
+	scanf("%20s\t%20s\t%20s", &f_name, &m_name, &l_name);
+	printf("%s\t\n%s\t\n%s", f_name, m_name, l_name);
+	printf("\n\nEnter two numbers separated by *:\n");
+    flush_buffer();
+    scanf("%d%*c%d", &num1, &num2);
+	printf("The result of %d multiplied by %d is %d.", num1, num2, num1*num2);
+    
+    return 0;
 
 } // end main function

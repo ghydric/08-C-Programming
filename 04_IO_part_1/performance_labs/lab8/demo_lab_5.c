@@ -19,8 +19,9 @@ int main(void) {
     int day = 0;
     int year = 0;
 
+    // prompt user, get input from user, then display the newly formatted date to the screen
     printf("Please enter a date (mm-dd-yyyy): ");
-    scanf("%2[012]d-%2d-%4d", &month, &day, &year);
+    scanf("%2d-%2d-%4d", &month, &day, &year);
     printf("\nThe date you entered was: %02d/%02d/%04d", month, day, year);
     
 	return 0;
