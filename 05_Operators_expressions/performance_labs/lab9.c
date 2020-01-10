@@ -17,21 +17,22 @@ int flush_buffer() {
 int main(void){
     
     // initialize triangle leg a, b, and c
-    float a = 0.0;
-    float b = 0.0;
-    float c = 0.0;
-    
+    double a, b, c;
+
     // get leg a and b from user input
     printf("Enter the size of leg a: \n");
-    scanf("%05f", &a);
+    scanf("%lf", &a);
     flush_buffer();
     printf("Enter the size of leg b: \n");
-    scanf("%05f", &b);
+    scanf("%lf", &b);
     flush_buffer();
 
-    if (a < b){
+    if (a > 0 && b > 0){
          // calculate leg c (hypotenuse) using Pythagorean Theorem (a^2 + b^2 = c^2)
         c = sqrt((a*a) + (b*b));
+        printf("The length of the hypotenuse is %lf\n", c);
+    } else {
+        printf("Not a real triangle. Try again.");
     }
    
 
