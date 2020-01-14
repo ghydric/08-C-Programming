@@ -14,24 +14,24 @@ Synopsis:
 int main(void){
 
     // initialize NUL terminated character array and counter integer
-    char multiple_phrases[128] = {0};
-    multiple_phrases[-1] = '\0';
+    char multiple_phrases[] = "\tThis is the first line\n\tThis is the second line\n\tThis is the third line\0";
     int c = 0;
 
-    // prompt user for input string that includes spaces
-    printf("Enter a string with multiple spaces: \n");
-    fgets(multiple_phrases, sizeof(multiple_phrases), stdin);
-    printf("%s", multiple_phrases);
-    printf("%s", multiple_phrases[c]);
-    // loop through array and print out everything up to the new line character or NUL character
-    while (multiple_phrases[c] != '\0')
-        if (multiple_phrases[c] == ' '){
-            printf("\n");
-        } else {
-            puts(multiple_phrases[c]);
-        }
-        // increment the index counter
-        c++;
+    printf("\nUsing puts to show the lines:\n\n");
+    // show the user input with puts
+    puts(multiple_phrases);
 
+    printf("\nNow for the loop:\n\n");
+    // loop through array and print out everything up to the new line character or NUL character
+    while (multiple_phrases[c] != '\0' && multiple_phrases[c] != '\n'){
+        
+        // print out characters to screen
+        putchar(multiple_phrases[c]);
+        
+        // increment the index counter 1
+        c++;
+    }
+
+    printf("\n");
     return 0;
 }
