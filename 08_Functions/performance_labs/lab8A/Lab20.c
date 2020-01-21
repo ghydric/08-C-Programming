@@ -40,12 +40,6 @@ int replace_character(char * string, const char findThisChar, const char replace
                 characters_replaced++;
             }
         }
-        //for (int i = 0; string[i] != NULL; i++){
-        //    if (string[i] == findThisChar){
-        //        string[i] = replaceItWithThis;
-        //        characters_replaced++;
-        //    }
-        //}
         return characters_replaced;
     }
     
