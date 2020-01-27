@@ -16,6 +16,7 @@ Synopsis:
 
 int main(void)
 {
+    // initialize filenames for reading from and writing to
     char read_filename[26] = "mighty_morphin_lyrics.txt";
     char write_filename[31] = "new2_mighty_morphin_lyrics.txt";
     
@@ -42,19 +43,21 @@ int main(void)
         for (int i = 0; i <= 255; i++){
             tempBuff[i] = 0;
         }
+        
+        // reset tempReturnValue
+        tempReturnValue = tempBuff;
 
         // open the newly written file and read line by line, printing each line to the screen
         read_file_ptr = fopen(write_filename, "r");
         while (tempReturnValue) // Continue reading until return value is NULL
         {
-            printf("it works!");
             tempReturnValue = fgets(tempBuff, 256, read_file_ptr);
             if (tempReturnValue) 	// If EOF hasn’t been reached…
             {
                 fputs(tempBuff, stdout);	// …print the buffer
             }
         }
-        // close the open files
+        // close the open file
         fclose(read_file_ptr);
 
     } else {
