@@ -27,4 +27,5 @@ int main(void){
 
     char string_array[BUFFSIZE] = TO_STRING(CONCATENATE(This is string 1, This is string 2));
     printf("Your string array is: %s", string_array);
+
 }
