@@ -38,6 +38,72 @@ Although stack is a simple data structure to implement, it is very powerful. The
 **In compilers**- Compilers use stack to calculate the value of expressions like 2+4/5*(7-9) by converting the expression to prefix or postfix form.
 **In browsers** - The back button in a browser saves all the urls you have visited previously in a stack. Each time you visit a new page, it is added on top of the stack. When you press the back button, the current URL is removed from the stack and the previous url is accessed.
 
+peek() − get the top data element of the stack, without removing it.
+
+isFull() − check if stack is full.
+
+isEmpty() − check if stack is empty.
+
+
+### peek()
+Algorithm of peek() function
+```
+begin procedure peek
+   return stack[top]
+end procedure
+```
+### peek() function 
+```c
+int peek() {
+   return stack[top];
+}
+
+```
+### isfull()
+Algorithm of isfull() function
+```
+begin procedure isfull
+
+   if top equals to MAXSIZE
+      return true
+   else
+      return false
+   endif
+   
+end procedure
+```
+### Implementation of isfull() function 
+
+```c
+bool isfull() {
+   if(top == MAXSIZE)
+      return true;
+   else
+      return false;
+}
+```
+### isempty()
+Algorithm of isempty() function
+```
+begin procedure isempty
+
+   if top less than 1
+      return true
+   else
+      return false
+   endif
+   
+end procedure
+```
+```
+bool isempty() {
+   if(top == -1)
+      return true;
+   else
+      return false;
+}
+```
+
 ```c
 #include <stdio.h>
 
