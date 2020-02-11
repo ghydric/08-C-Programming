@@ -33,8 +33,95 @@ Before popping, we check if stack is already empty
 
 ## Use of stack
 Although stack is a simple data structure to implement, it is very powerful. The most common uses of a stack are:
+
+**To reverse a word** - Put all the letters in a stack and pop them out. Because of LIFO order of stack, you will get the letters in reverse order.
+**In compilers**- Compilers use stack to calculate the value of expressions like 2+4/5*(7-9) by converting the expression to prefix or postfix form.
+**In browsers** - The back button in a browser saves all the urls you have visited previously in a stack. Each time you visit a new page, it is added on top of the stack. When you press the back button, the current URL is removed from the stack and the previous url is accessed.
+
+```c
+#include <stdio.h>
+
+int MAXSIZE = 8;       
+int stack[8];     
+int top = -1;            
+
+int isempty() {
+
+   if(top == -1)
+      return 1;
+   else
+      return 0;
+}
+   
+int isfull() {
+
+   if(top == MAXSIZE)
+      return 1;
+   else
+      return 0;
+}
+
+int peek() {
+   return stack[top];
+}
+
+int pop() {
+   int data;
+	
+   if(!isempty()) {
+      data = stack[top];
+      top = top - 1;   
+      return data;
+   } else {
+      printf("Could not retrieve data, Stack is empty.\n");
+   }
+}
+
+int push(int data) {
+
+   if(!isfull()) {
+      top = top + 1;   
+      stack[top] = data;
+   } else {
+      printf("Could not insert data, Stack is full.\n");
+   }
+}
+
+int main() {
+   // push items on to the stack 
+   push(3);
+   push(5);
+   push(9);
+   push(1);
+   push(12);
+   push(15);
+
+   printf("Element at top of the stack: %d\n" ,peek());
+   printf("Elements: \n");
+
+   // print stack data 
+   while(!isempty()) {
+      int data = pop();
+      printf("%d\n",data);
+   }
+
+   printf("Stack full: %s\n" , isfull()?"true":"false");
+   printf("Stack empty: %s\n" , isempty()?"true":"false");
+   
+   return 0;
+}
 ```
-To reverse a word - Put all the letters in a stack and pop them out. Because of LIFO order of stack, you will get the letters in reverse order.
-In compilers - Compilers use stack to calculate the value of expressions like 2+4/5*(7-9) by converting the expression to prefix or postfix form.
-In browsers - The back button in a browser saves all the urls you have visited previously in a stack. Each time you visit a new page, it is added on top of the stack. When you press the back button, the current URL is removed from the stack and the previous url is accessed.
+Example Output:
+
+```
+Element at top of the stack: 15
+Elements:
+15
+12
+1 
+9 
+5 
+3 
+Stack full: false
+Stack empty: true
 ```
