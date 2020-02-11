@@ -2,14 +2,15 @@
 ## Stack 
 A stack is a useful data structure in programming. It is just like a pile of plates kept on top of each other.
 
-```
 Think about the things you can do with such a pile of plates
 
 Put a new plate on top
 Remove the top plate
-If you want the plate at the bottom, you have to first remove all the plates on top. Such kind of arrangement is called Last In First Out - the last item that was placed is the first item to go out.
 
-```
+If you want the plate at the bottom, you have to first remove all the plates on top. 
+Such kind of arrangement is called **Last In First Out** - the last item that was placed is the first item to go out.
+
+
 
 ## Stack Specification
 A stack is an object or more specifically an abstract data structure(ADT) that allows the following operations:
