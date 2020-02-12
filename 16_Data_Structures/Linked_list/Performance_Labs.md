@@ -8,3 +8,43 @@
 ## 3. Write a program to create a doubly linked list and perform insertions and deletions in all
 cases
 
+## 4. Write a linked-list that creates a queue process for checking-in. 
+   Example output: 
+   
+```
+1: ADD
+2: REMOVE
+3: DISPLAY BOARD
+0: QUIT
+
+Enter your choice: 1
+Name: Cyber
+
+1: ADD
+2: REMOVE
+3: DISPLAY BOARD
+0: QUIT
+
+Enter your choice: 1
+Name: Warrior
+
+1: ADD
+2: REMOVE
+3: DISPLAY BOARD
+0: QUIT
+
+Enter your choice: 3
+BOARD:
+1. Cyber
+2. Warrior
+
+1: ADD
+2: REMOVE
+3: DISPLAY BOARD
+0: QUIT
+
+Enter your choice: 0
+
+root@VM:~#
+
+```
