@@ -5,8 +5,14 @@
 ## 2. (using the program you previously created) check if a word is a palindrome. 
 
 
-## 3. Write a program to create a doubly linked list and perform insertions and deletions in all
-cases
+## 3. Create an investment list.
+'''
+Investment Portfolio
+Symbol   Shares   Price    Value
+GOOG     1000     1801.19  1801189.94
+APPLE    1000     1128.77  1128770.02
+
+```
 
 ## 4. Write a linked-list that creates a queue process for checking-in. 
    Example output: 
@@ -48,3 +54,6 @@ Enter your choice: 0
 root@VM:~#
 
 ```
+
+## 5. Write a program to create a doubly linked list and perform insertions and deletions in all
+cases
