@@ -3,6 +3,12 @@
 A circular linked list is a linked list in which the last node points to the head or front node making the data structure to look like a circle. 
 A circularly linked list node can be implemented using singly linked or doubly linked list.
 
+## Application of Circular Linked List
+The real life application where the circular linked list is used is our Personal Computers, where multiple applications are running. All the running applications are kept in a circular linked list and the OS gives a fixed time slot to all for running. The Operating System keeps on iterating over the linked list until all the applications are completed.
+Another example can be Multiplayer games. All the Players are kept in a Circular Linked List and the pointer keeps on moving forward as a player's chance ends.
+Circular Linked List can also be used to create Circular Queue. In a Queue we have to keep two pointers, FRONT and REAR in memory all the time, where as in Circular Linked List, only one pointer is required.
+
+
 ## Node Creation
 
 ```c
