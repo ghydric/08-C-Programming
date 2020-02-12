@@ -76,7 +76,7 @@ void display()
 }
 ```
 
-Putting it all  together ( Without errors hopefully) 
+## Putting it all  together ( Without errors hopefully) 
 ```c
 #include<stdio.h>
 #include<stdlib.h>
