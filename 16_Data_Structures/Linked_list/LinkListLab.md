@@ -80,5 +80,11 @@ int main()
   return 0; 
 } 
 ```
-
+## Expected Output
+```
+ Output of Part1() for list 1->2->3->4->5 
+5 4 3 2 1 
+Output of Part2() for list 1->2->3->4->5 
+1 3 5 5 3 1 
+```
 
