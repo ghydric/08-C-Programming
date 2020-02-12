@@ -58,7 +58,7 @@ void del()
 	}
 }
 ```
-Traversing the Circular Linked list
+## Traversing the Circular Linked list
 ```c
 
 void display()
