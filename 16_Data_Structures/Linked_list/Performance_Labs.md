@@ -63,12 +63,15 @@ cases
 
 Input the names into a list.
 
-Output the unsorted names.
+Display the unsorted names.
 
 Sort the names in alphabetical order.
 
-Output the sorted names.
+Display the sorted names
+
+Create a file with the sorted names.
 
 ### Data ( at least) 
 
-Input 11 names.
+get at least 11 names.
+
