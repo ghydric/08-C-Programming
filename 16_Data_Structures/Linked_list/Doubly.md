@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/47218880/74446318-54bf0d80-4e3d-11ea-9e3f-7a68a3fd4eef.png)
 ### adding to the front
 ```c
-void insert(struct Node** head_ref, int new_data) //inserts a new node on the front of the list. 
+void addAtFront(struct Node** head_ref, int new_data) //inserts a new node on the front of the list. 
 { 
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));   // allocate node 
     new_node->data = new_data; //add in the data  
