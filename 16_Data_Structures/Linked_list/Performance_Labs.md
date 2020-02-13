@@ -57,3 +57,18 @@ root@VM:~#
 
 ## 5. Write a program to create a doubly linked list and perform insertions and deletions in all
 cases
+## 6. Problem Write a program to sort the names stored in a list into alphabetical order. Print the unsorted and sorted names.
+
+### Method (Requirements)
+
+Input the names into a list.
+
+Output the unsorted names.
+
+Sort the names in alphabetical order.
+
+Output the sorted names.
+
+### Data ( at least) 
+
+Input 11 names.
