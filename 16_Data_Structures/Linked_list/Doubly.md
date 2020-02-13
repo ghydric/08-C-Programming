@@ -16,7 +16,7 @@ struct node *last = NULL;
 struct node *current = NULL;
 
 //Create Linked List
-void insert(int data) {
+void add(int data) {
    // Allocate memory for new node;
    struct node *link = (struct node*) malloc(sizeof(struct node));
 
@@ -43,7 +43,7 @@ void insert(int data) {
 }
 
 //display the list
-void printList() {
+void display() {
    struct node *ptr = head;
 
    printf("\n[head] <=>");
@@ -59,14 +59,14 @@ void printList() {
 }
 
 int main() {
-   insert(10);
-   insert(20);
-   insert(30);
-   insert(1);
-   insert(40);
-   insert(56); 
+   add(1);
+   add(2);
+   add(3);
+   add(10);
+   add(20);
+   add(30); 
 
-   printList();
+   display();
    return 0;
 }
 ```
@@ -88,7 +88,7 @@ struct node *last = NULL;
 struct node *current = NULL;
 
 //Create Linked List
-void insert(int data) {
+void add(int data) {
    // Allocate memory for new node;
    struct node *link = (struct node*) malloc(sizeof(struct node));
 
@@ -115,7 +115,7 @@ void insert(int data) {
 }
 
 //display the list
-void printList() {
+void display() {
    struct node *ptr = head;
 
    printf("\n[head] <=>");
@@ -131,14 +131,14 @@ void printList() {
 }
 
 int main() {
-   insert(10);
-   insert(20);
-   insert(30);
-   insert(1);
-   insert(40);
-   insert(56); 
+   add(1);
+   add(2);
+   add(3);
+   add(10);
+   add(20);
+   add(30); 
 
-   printList();
+   display();
    return 0;
 }
 ```
@@ -160,7 +160,7 @@ struct node *last = NULL;
 struct node *current = NULL;
 
 //display the list
-void printList() {
+void display() {
    struct node *ptr = head;
 
    printf("\n[head] <=>");
@@ -174,7 +174,7 @@ void printList() {
 }
 
 //display the list
-void print_backward() {
+void displayBackward() {
    struct node *ptr = last;
 
    printf("\n[head] <=>");
@@ -188,7 +188,7 @@ void print_backward() {
 }
 
 //Create Linked List
-void insert(int data) {
+void add(int data) {
    // Allocate memory for new node;
    struct node *link = (struct node*) malloc(sizeof(struct node));
 
@@ -215,15 +215,15 @@ void insert(int data) {
 }
 
 int main() {
-   insert(10);
-   insert(20);
-   insert(30);
-   insert(1);
-   insert(40);
-   insert(56); 
+   add(1);
+   add(2);
+   add(3);
+   add(4);
+   add(5);
+   add(6); 
 
-   printList();
-   print_backward();
+   display();
+   displayBackward();
    
    return 0;
 }
