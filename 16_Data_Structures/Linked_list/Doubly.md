@@ -3,20 +3,12 @@
 ```c
 void insert(struct Node** head_ref, int new_data) //inserts a new node on the front of the list. 
 { 
-   
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));   // allocate node 
-  
     new_node->data = new_data; //add in the data  
-  
-    
     new_node->next = (*head_ref); // change next of new node as head and previous as NULL 
     new_node->prev = NULL; 
-  
-   
     if ((*head_ref) != NULL)  // modify prev of head node to new node 
         (*head_ref)->prev = new_node; 
-  
-  
     (*head_ref) = new_node;   // change the head to point to the new node 
 }
 ```
@@ -25,28 +17,15 @@ void insert(struct Node** head_ref, int new_data) //inserts a new node on the fr
 
 void addAt(struct Node* prev_node, int new_data) 
 { 
-    
     if (prev_node == NULL) { 
         printf("the given previous node cannot be NULL");  // check if the given prev_node is NULL 
         return; 
     } 
-  
-   
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));  // allocate new node 
-  
-   
     new_node->data = new_data;  // add in the data  
-  
-  
     new_node->next = prev_node->next;    // change next of new node as next of prev_node 
-  
-   
     prev_node->next = new_node;   // modify the next of prev_node as new_node
-  
-   
     new_node->prev = prev_node;   // Make prev_node as previous of new_node 
-  
-   
     if (new_node->next != NULL) 
         new_node->next->prev = new_node;  // Change previous of new_node's next node 
 } 
@@ -58,30 +37,19 @@ void addAtEnd(struct Node** head_ref, int new_data)
 { 
     
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node)); 
-  
     struct Node* last = *head_ref; //used in traversing
-  
- 
     new_node->data = new_data; // add in the data
-  
     new_node->next = NULL; // the added node will be the last, this is what it will point to.
-  
-  
     if (*head_ref == NULL) { 
         new_node->prev = NULL; 
         *head_ref = new_node; // overalll checking for emptiness 
         return; 
     } 
   
-   
     while (last->next != NULL) // go through the list until you reach the last node
         last = last->next; 
-  
     last->next = new_node; // modify the next of final node
-  
-    
     new_node->prev = last;  modify the final node as previous of the new one
-  
     return; 
 } 
 
