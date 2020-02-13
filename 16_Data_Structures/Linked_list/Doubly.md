@@ -1,4 +1,25 @@
 ![image](https://user-images.githubusercontent.com/47218880/74446318-54bf0d80-4e3d-11ea-9e3f-7a68a3fd4eef.png)
+### adding to the node
+```c
+void insert(struct Node** head_ref, int new_data) //inserts a new node on the front of the list. 
+{ 
+   
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));   // allocate node 
+  
+    new_node->data = new_data; //add in the data  
+  
+    
+    new_node->next = (*head_ref); // change next of new node as head and previous as NULL 
+    new_node->prev = NULL; 
+  
+   
+    if ((*head_ref) != NULL)  // modify prev of head node to new node 
+        (*head_ref)->prev = new_node; 
+  
+  
+    (*head_ref) = new_node;   // change the head to point to the new node 
+}
+
 
 # Doubly Linked List Example 1
 ```c
