@@ -23,7 +23,7 @@ typedef struct List_Item {
 
 // create Singly_Linked_List Structure
 typedef struct Singly_Linked_List {
-    Item item;
+    Item* item;
     Item* head_ptr;
     Item* tail_ptr;
 } Singly;
@@ -31,7 +31,7 @@ typedef struct Singly_Linked_List {
 int Append_Item(Singly* list, char data){
     
     // set new_Item pointer to the address of list
-    Item* new_item = list;
+    Item* new_item = list + count;
     
     // if this is the first item in linked list, set the next pointer to null,
     // set data property to passed in character, set list head and tail pointers to the new_item
@@ -44,7 +44,9 @@ int Append_Item(Singly* list, char data){
     } else if (count == MAXSIZE){
         return -1;
     } else {
-
+        new_item->data = data;
+        new_item->next_ptr = ((list + count) - 1);
+        list->tail_ptr = new_item;
     }
 }
 
@@ -98,5 +100,8 @@ int main(void){
 
 
 void Print_List(Singly* list){
-
+    while(list->item){
+        printf("%c", list->item->data);
+        list->item++;
+    }
 }
