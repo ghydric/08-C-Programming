@@ -4,11 +4,6 @@ Date: 02/11/2020
 Title: Performance Lab: Insertion Sort 2
 Synopsis:
     - Write a C program that implements the insertion sort algorithm. 
-    - Create it with the following example output:
-        Enter the number of elements in the array: 5
-        Enter the elements of the array: 500 1 50 23 76
-        The sorted array is:
-        1 23 50 76 500
 */
 
 // import necessary libraries
